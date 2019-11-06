@@ -1,0 +1,60 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<title>Github Monitor</title>
+	<link rel="stylesheet" href="{% static 'assets/css/auth.css' %}">
+    <link href="{% static 'assets/css/paper-dashboard.css' %}" rel="stylesheet"/>
+
+</head>
+
+<body>
+	<div class="lowin">
+		<div class="lowin-brand">
+			<img src="{% static 'assets/img/kodinger.jpg' %}" alt="logo">
+		</div>
+		<div class="lowin-wrapper">
+			<div class="lowin-box lowin-login">
+				<div class="lowin-box-inner">
+					<form method="post">
+                        {% csrf_token %}
+						<p>Github Monitor</p>
+						<div class="lowin-group">
+                            {% if message %}
+                                <div class="alert alert-warning" style="border-radius:8px">
+                                    <span><b>Warning - </b>{{ message }}</span>
+                                </div>
+                            {% endif %}
+                            <label>用户名</label>
+							<input type="username" autocomplete="username" name="username" class="lowin-input">
+						</div>
+						<div class="lowin-group password-group">
+							<label>密码</label>
+							<input type="password" name="password" autocomplete="current-password" class="lowin-input">
+						</div>
+						<button class="lowin-btn login-btn">
+							登 陆
+						</button>
+
+					</form>
+				</div>
+			</div>
+		</div>
+	
+		<footer class="lowin-footer">
+			Design By <a href="/">@Github Monitor</a>
+		</footer>
+	</div>
+
+	<script src="{% static 'assets/js/auth.js' %}"></script>
+
+	<script>
+		Auth.init({
+			login_url: '#login',
+		});
+	</script>
+</body>
+</html>

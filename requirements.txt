@@ -1,0 +1,8 @@
+django==2.2.6
+bs4
+demjson
+lxml
+mysqlclient
+mysql
+requests
+supervisor
