@@ -29,7 +29,7 @@ python3 manager.py migrate
 
 未处理信息
 
-![1573011525234](README.assets/68268533-8764a780-0091-11ea-8231-30c8635d2067.png)
+![1573011525234](https://user-images.githubusercontent.com/27627614/68268533-8764a780-0091-11ea-8231-30c8635d2067.png)
 
 界面由于对js了解较少，没有采用比较nodejs类前端框架，当然也可以修改为自己喜欢的界面。
 
