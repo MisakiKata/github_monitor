@@ -1,5 +1,6 @@
 from django.shortcuts import render, redirect
 from .models import UserList
+from django.contrib.auth import logout as lg
 # Create your views here.
 
 
@@ -45,6 +46,6 @@ def logout(request):
     """退出"""
     if request.session.get('is_login') != '1':
         return redirect('/login')
-
-    pass
+    lg(request)
+    return redirect('/login')
 
