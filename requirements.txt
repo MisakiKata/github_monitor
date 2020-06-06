@@ -1,4 +1,4 @@
-django==2.2.6
+django==2.2.13
 bs4
 demjson
 lxml
